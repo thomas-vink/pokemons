@@ -1,5 +1,5 @@
 <?php
-
+//hier de weakness class
 class weakness
 {
 	public $name;

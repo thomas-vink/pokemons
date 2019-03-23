@@ -1,5 +1,5 @@
 <?php
-
+//de resistance class
 class Resistance
 {
     public $name;

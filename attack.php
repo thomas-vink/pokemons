@@ -1,5 +1,5 @@
 <?php
-
+//hier de attack class
 class Attack
 {
 	public $attackname;
