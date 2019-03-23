@@ -2,15 +2,14 @@
 
 class Attack
 {
-	public $attackName;
-	public $attackDmg;
+	public $attackname;
+	public $attackdmg;
 
 
-	public function __construct($attackName,$attackDmg)
+	public function __construct($attackname,$attackdmg)
 	{
-		$this->attackName = $attackName;
-		$this->attackDmg = $attackDmg;
+		$this->attackname = $attackname;
+		$this->attackdmg = $attackdmg;
 	}
-
 
 }
