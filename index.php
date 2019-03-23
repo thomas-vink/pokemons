@@ -5,32 +5,32 @@
 
 //pokemon 1
 $pokemon1 = new pokemon(
-	"pickachu",
+	"Ahmet",
 	150,
 	20,
 	"electric",
 	[
-		new attack('1000 volt up yo ass', 100),
-		new attack('mommy slap', 50)
+		new attack('1000 volt up his ass gepopt', 100),
+		new attack('mommy geslapt', 50)
 	]
 );
 
 //pokemon 2
 $pokemon2 = new pokemon(
-	"dylan",
+	"Dylan",
 	200,
 	0,
 	"bitchboi",
 	[
-		new attack('schelden', 25),
-		new attack('slap', 150)
+		new attack('uitgescholden', 25),
+		new attack('geslapt', 150)
 	]
 );
 
 
-prettyPrint($pokemon1);
-prettyPrint($pokemon2);
 
+$pokemon1->getPokemon($pokemon2);
+$pokemon1->doDamage($pokemon2);
 
 
 
