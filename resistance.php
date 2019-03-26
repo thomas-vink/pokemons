@@ -8,6 +8,6 @@ class Resistance
     public function __construct($name, $resistance)
     {
         $this->name = $name;
-        $this->Resistance = $resistance;
+        $this->resistance = $resistance;
     }
 }
