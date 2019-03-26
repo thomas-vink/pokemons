@@ -1,4 +1,5 @@
 <?php
+// de pokemon class
 abstract class pokemon
 {
 	protected $name;
@@ -35,6 +36,7 @@ abstract class pokemon
 
 } 
 
+//de ahmet class
 class ahmet extends pokemon
 {
 	public $type;
@@ -53,6 +55,7 @@ class ahmet extends pokemon
 	}
 }
 
+// de dylan class
 class dylan extends pokemon
 {
 	public $type;
