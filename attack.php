@@ -2,44 +2,37 @@
 //hier de attack class
 class Attack
 {
-	public $attackname;
-	public $attackdmg;
+	public $attackName;
+	public $attackDmg;
 
-
-	public function __construct($attackname,$attackdmg)
+	public function __construct($attackName, $attackDmg)
 	{
-		$this->attackname = $attackname;
-		$this->attackdmg = $attackdmg;
+		$this->attackName = $attackName;
+		$this->attackDmg = $attackDmg;
 	}
 
-	public function attack($attacker,$defender)
+	public function attack($attacker, $defender)
 	{
-		
+
 		// hier kijk ik of de weakness van de defender gelijk is aan de type van de atacker zijn type
 		if($attacker->type === $defender->weakness->name ){
-			echo "attack deed groote auw";
-            echo "<br>";
-            $attackdmg = $this->attackdmg * $defender->weakness->multiplier;
-            echo $attackdmg.'dmg done';
+            $attackDmg = $this->attackDmg * $defender->weakness->multiplier;
+            $attackMessage = $attacker->name.' attacked '.$defender->name.' and it was very effective did '.$attackDmg.'dmg';
 		}
 
 		// hier kijk ik of de resistance van de defender gelijk is aan de type van de atacker zijn type
 		else if ($attacker->type === $defender->resistance->name) {
-            echo "attack was not verry good";
-            echo "<br>";
-            $attackdmg = $this->attackdmg - $defender->resistance->resistance;
-           	echo $attackdmg.'dmg done';
+            $attackDmg = $this->attackDmg - $defender->resistance->resistance;
+            $attackMessage = $attacker->name.' attacked '.$defender->name.' and it was not very effective did '.$attackDmg.'dmg';
 		}
 
 		//dit is als er geen van het bovenste van toepasing is 
 		else{
-            echo "The attack hit him/her.";
-            echo "<br>";
-            $attackdmg = $this->attackdmg;
-           	echo $attackdmg.'dmg done';
+            $attackDmg = $this->attackDmg;
+            $attackMessage = $attacker->name.' attacked '.$defender->name.' and did '.$attackDmg.'dmg';
         }
-        echo "<br>";
-       	$defender->dodmg($defender,$attackdmg );
+        return($attackMessage);
+       	$defender->doDmg($defender, $attackDmg);
 
 	}
 

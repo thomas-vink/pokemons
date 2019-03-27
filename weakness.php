@@ -1,6 +1,6 @@
 <?php
 //hier de weakness class
-class weakness
+class Weakness
 {
 	public $name;
 	public $multiplier;

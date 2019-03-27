@@ -9,41 +9,40 @@
 
 //declare the types
 $types = [
-        new Type("Turk"),
-        new Type("tokkie"),
-        new Type("kakker"),
-        new Type("mokro")
+        new Type("Electric"),
+        new Type("Water"),
+        new Type("Fire"),
+        new Type("Toxic")
 ];
 //pokemon 1
-$person1 = new ahmet(
-	"Ahmet",
+$Pikachu = new Pikachu(
+	"pikachu",
 	150,
 	$types[3],
 	new Weakness($types[1], 1.5),
 	new Resistance($types[3], 20),
 	[
-		new attack('1000 volt up his ass gepopt', 100),
-		new attack('tantoe hard slaan', 50)
+		new attack('Pika Punch', 50),
+		new attack('Electric Ring', 100)
 	]
 );
-//pokemon 2
-$person2 = new dylan(
-	"Dylan",
-	125,
+$Charmeleon = new Charmeleon(
+	"Charmeleon",
+	200,
 	$types[1],
-	new Weakness($types[2], 2),
-	new Resistance($types[0], 25),
+	new Weakness($types[2], 1.5),
+	new Resistance($types[3], 20),
 	[
-		new attack('schelden', 25),
-		new attack('slaan met stok', 100)
+		new attack('Pika Punch', 50),
+		new attack('Electric Ring', 100)
 	]
 );
 
+//$person1->get('attacks');
 
-//$person1->get('all');
-//$person2->get('all');
-$person1->attacks[0]->attack($person1,$person2);
+//$person2->get('name');
 
+echo $Pikachu->attacks[0]->attack($Pikachu,$Charmeleon);
 
 
 
